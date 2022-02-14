@@ -1,0 +1,10 @@
+node_modules/
+assets/*
+!assets/data.json
+nginx/conf
+!nginx/conf/nginx.conf
+.idea
+.DS_Store
+npm-debug.log
+report/
+

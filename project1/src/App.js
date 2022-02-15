@@ -1,7 +1,7 @@
 import "./App.css";
-import ExpenseItem from "./components/ExpenseItem";
+import Expenses from "./components/Expenses/Expenses";
 
-function App() {
+const App = () => {
   const expenses = [
     {
       date: new Date(2018, 2, 1),
@@ -22,26 +22,7 @@ function App() {
     },
   ];
 
-  return (
-    <div>
-      <h1>Expense Tracker App</h1>
-      <ExpenseItem
-        date={expenses[0].date.toDateString()}
-        title={expenses[0].title}
-        amount={expenses[0].amount}
-      />
-      <ExpenseItem
-        date={expenses[1].date.toDateString()}
-        title={expenses[1].title}
-        amount={expenses[1].amount}
-      />
-      <ExpenseItem
-        date={expenses[2].date.toDateString()}
-        title={expenses[2].title}
-        amount={expenses[2].amount}
-      />
-    </div>
-  );
-}
+  return <Expenses items={expenses} />;
+};
 
 export default App;
